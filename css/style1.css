@@ -20,7 +20,20 @@
   
 }
 
+.navbar{
+  height:20%;
+  display:flex;
+  align-items:center;
+  width:110%;
+  padding:10px;
+}
 
+
+.logo{
+  width:200px;
+  height:60px;
+  cursor:pointer;
+}
 
 nav{
   flex:1;
@@ -170,7 +183,18 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
-
+button{
+   
+    width:90px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: #2ba1cf;
+}
 #clockdiv{
     font-family: sans-serif;
     color: #fff;
