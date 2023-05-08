@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Moviezone</title>
+	<link rel="stylesheet" type="text/css" href="css/show.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+        <div class="navbar">
+		<img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="show.html">Now-Showing</a></li>
+            
+            </ul>
+        </nav>
+        </div>
+
+<br><br>
+<div class="filter">
+    <label for="genre">Filter by Genre:</label>
+    <select id="genre">
+        <option value="all">All Genres</option>
+        <option value="thriller">Thriller</option>
+        <option value="animation">Animation</option>
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="science-fiction">Science Fiction</option>
+    </select>
+</div>
+<br><br>
+<div class="movies-heading">
+    <h2>Movies</h2>
+</div>
+<section id="movies-list">
+   
+    <div class="movies-box">
+       
+        <div class="movies-img">
+            <div class="quality">Thriller</div>
+            <img src="images/joker.jpg">
+        </div>
+     
+        <h4>Joker</h4>
+    <pre>
+    Show time: 09.00 am,
+    3.05 pm,9.00 pm
+    Language: English
+    </pre>
+            
+    </div>
+     
+     <div class="movies-box">
+     
+        <div class="movies-img">
+            <div class="quality">Animation</div>
+            <img src="images/lionking.jpg">
+        </div>
+ 
+        <h4>The Lion King</h4>
+    <pre>
+    Show time: 12.00 pm,
+    3.00 pm,6.00 pm
+    Language: English,
+    Tamil,Hindi
+    </pre>
+    </div>
+     
+     <div class="movies-box">
+       
+        <div class="movies-img">
+            <div class="quality">Action</div>
+            <img src="images/johnwick.jpg">
+        </div>
+       
+        <h4>JohnWick 4</h4>
+    <pre>
+    Show time: 09.00 am,
+    6.00 pm,9.00 pm
+    Language: English,Tamil
+    </pre>
+    </div>
+     
+     <div class="movies-box">
+        
+        <div class="movies-img">
+            <div class="quality">Adventure</div>
+            <img src="images/dasara.jpg">
+        </div>
+        
+        <h4>Dasara</h4>
+    <pre>
+    Show time: 9.00 am,
+    3.05 pm,6.00 pm
+    Language: Tamil,Telugu
+    </pre>
+    </div>
+     
+     <div class="movies-box">
+       
+        <div class="movies-img">
+            <div class="quality">Science-fiction</div>
+            <img src="images/starwars.jpg">
+        </div>
+       
+        <h4>Star Wars(The Rise Of SkyWalker)</h4>
+        <pre>
+        Show time: 12.00 pm,
+        3.00pm
+        Language: English
+        </pre>
+    </div>
+     
+     <div class="movies-box">
+        
+        <div class="movies-img">
+            <div class="quality">Adventure</div>
+            <img src="images/aquamen.jpg">
+        </div>
+        
+        <h4>Aquaman</h4>
+    <pre>
+    Show time: 12.00 pm,
+     3.00 pm,6.05 pm
+    Language: English,Hindi
+   </pre>
+    </div>
+     
+     <div class="movies-box">
+        
+        <div class="movies-img">
+            <div class="quality">Science-fiction</div>
+            <img src="images/avatar.jpg">
+        </div>
+        
+        <h4>Avatar(The Way Of Water)</h4>
+        <pre>
+        Show time: 9.00 am,
+        12.05 pm,9.00 pm
+        Language: English,Tamil,
+        Hindi,Kannada,Telugu
+        </pre>
+    </div>
+     
+     <div class="movies-box">
+        
+        <div class="movies-img">
+            <div class="quality">Action</div>
+            <img src="images/junglecruise.jpg">
+        </div>
+       
+        <h4> Jungle Cruise</h4>
+        <pre>
+        Show time:12.00 pm,
+        6.00 pm,9.00 pm
+        Language:English,
+        Tamil,Hindi
+        </pre>
+    </div>
+</section>
+</div>
+<script>
+    const select = document.querySelector('#genre');
+    select.addEventListener('change', filterMovies);
+
+    function filterMovies() {
+        const selectedGenre = select.value;
+        const movieBoxes = document.querySelectorAll('.movies-box');
+
+        movieBoxes.forEach(movieBox => {
+            if (selectedGenre === 'all' || movieBox.querySelector('.quality').textContent.toLowerCase() === selectedGenre) {
+                movieBox.style.display = 'block';
+            } else {
+                movieBox.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body></html>
+

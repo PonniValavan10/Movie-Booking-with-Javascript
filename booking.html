@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Moviezone</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+        <div class="navbar">
+		<img src="images/logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="show.html">Now-showing</a></li>
+                
+            </ul>
+        </nav>
+        </div>
+        <form onsubmit="return validateForm()">
+    <div class="movie-container">
+      <label>Pick a movie:</label>
+      <select id="movie">
+        <option value="250">Avatar:The Way of Water (Rs.250)</option>
+        <option value="220">Joker (Rs.220)</option>
+        <option value="250">Aquaman (Rs.250)</option>
+        <option value="240">The Lion King (Rs.240)</option>
+        <option value="240">JohnWick 4 (Rs.240)</option>
+        <option value="250">Dasara (Rs.250)</option>
+        <option value="240">JungleCruise (Rs.240)</option>
+        <option value="260">Star Wars(The Rise Of SkyWalker) (Rs.260)</option>
+      </select>
+    </div>
+    
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <p class="text">
+      You have selected <span id="count">0</span> seats for a price of Rs.<span
+        id="total"
+        >0</span
+      >
+    </p>
+   
+      <button type="submit">Submit</button>
+      <br><br>
+      <h4>Next Show In</h4>
+      <div id="clockdiv">
+        <div>
+          <span class="days" id="day"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours" id="hour"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes" id="minute"></span>
+          <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+          <span class="seconds" id="second"></span>
+          <div class="smalltext">Seconds</div>
+        </div>
+      </div>
+  
+    <script src="javascript/script.js"></script>
+    </form>
+
+    
+  </body>
+</html>
